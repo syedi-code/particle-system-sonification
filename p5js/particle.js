@@ -45,6 +45,14 @@ class Particle {
         var collided = false
 
         this.p.push()
+
+        // Create a new Collision object with empty/null values
+        var collision = {
+            collided: false,
+            balance: -2,
+            energy: 0,
+            frame: this.p.frameCount
+        };
         
         // On collision
         if (distanceVectMag < minDistance) {
@@ -121,10 +129,18 @@ class Particle {
             this.velocity.y = cosine * vFinal[0].y + sine * vFinal[0].x;
             other.velocity.x = cosine * vFinal[1].x - sine * vFinal[1].y;
             other.velocity.y = cosine * vFinal[1].y + sine * vFinal[1].x;
+
+            let collision_energy = this.p.abs(this.velocity.x) + this.p.abs(this.velocity.y) + this.p.abs(other.velocity.x) + this.p.abs(other.velocity.y)
+            collision = {
+                collided: true,
+                balance: this.p.map(this.pos.x, 0, this.p.width, -1, 1),
+                energy: collision_energy,
+                frame: this.p.frameCount
+            };
         }
         this.p.pop()
         
-        return collided
+        return collision
     }
 
     display() {

@@ -23,7 +23,7 @@ let s = function(p) {
   var particles = []
   var numParticles = 0
   var collisionOccurred = 5
-  var heat = 155
+  var heat = 1.0
   
   p.windowResized = function() {
     p.resizeCanvas(innerWidth, innerHeight);
@@ -31,12 +31,10 @@ let s = function(p) {
   
   p.setup = function() {
     p.createCanvas(innerWidth, innerHeight);
-    // p.createCanvas(600, 600)
     for (let i = 0; i < numParticles; i++) {
       particles.push(new Particle(p.random(0, p.width), p.random(0, p.height), p.random(4, 15), p));
     }
 
-    p.frameRate(60)
     p.colorMode(p.HSB, 255);
     
     if(maxIsDetected) {
@@ -50,13 +48,6 @@ let s = function(p) {
     }
   }
   
-  var collision = {
-    collided: false,
-    balance: -2,
-    energy: 0,
-    frame: p.frameCount
-};
-
   p.draw = function() {
   	p.background(255);
 
@@ -78,23 +69,23 @@ let s = function(p) {
       This has the most potential for optimization - this O(n^2) algorithm is very inefficient
 	    Optimizing the collision detection will also likely fix a lot of the bugginess
     */
-    
     for (let i = 0; i < particles.length; i++) {
       for (let j = 0; j < particles.length; j++) {
         if (i != j) {
-          collisionTemp = particles[i].checkCollision(particles[j]);
+          collided = particles[i].checkCollision(particles[j]);
           
-          if (collisionTemp.collided == true) {
-            collision = collisionTemp
-            collisionOccurred = 1
-          }
+          if (collided == true) collisionOccurred = 1
         }
       }
     }
     
     if(maxIsDetected) {
       window.max.outlet('status', p.frameCount, p.mouseIsPressed, collisionOccurred);
-      window.max.setDict('status_dict', collision);
+      let dict_obj = {
+        frame_count: p.frameCount,
+        mouse_pressed: p.mouseIsPressed,
+      };
+      window.max.setDict('status_dict', dict_obj);
       window.max.outlet('status_dict_updated');
     }
     
@@ -102,7 +93,7 @@ let s = function(p) {
   }
   
   p.mousePressed = function() {
-    // window.max.outlet('Mouse pressed!')
+  	window.max.outlet("Mouse pressed!");
     var valid = true
 
     // Checks if the cursor is within an existing particle
