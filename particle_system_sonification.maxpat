@@ -515,7 +515,152 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-43",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1145.0, 369.0, 35.0, 22.0 ],
+									"text" : "clear"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-44",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1022.0, 380.0, 60.0, 22.0 ],
+									"text" : "loadmess"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-45",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1022.0, 413.0, 117.0, 22.0 ],
+									"text" : "append Cymbal.wav"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-37",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 927.0, 364.0, 35.0, 22.0 ],
+									"text" : "clear"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-41",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 804.0, 375.0, 60.0, 22.0 ],
+									"text" : "loadmess"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-42",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 804.0, 408.0, 135.0, 22.0 ],
+									"text" : "append \"Snare (5).wav\""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-22",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 533.0, 373.0, 35.0, 22.0 ],
+									"text" : "clear"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-19",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 410.0, 384.0, 60.0, 22.0 ],
+									"text" : "loadmess"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-21",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 410.0, 417.0, 118.0, 22.0 ],
+									"text" : "append \"Hit (1).wav\""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-12",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 84.0, 408.0, 60.0, 22.0 ],
+									"text" : "loadmess"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-9",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 84.0, 441.0, 132.0, 22.0 ],
+									"text" : "append \"Kick (13).wav\""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 333.0, 369.0, 35.0, 22.0 ],
+									"text" : "clear"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-20",
 									"maxclass" : "number",
@@ -790,13 +935,25 @@
 								"box" : 								{
 									"basictuning" : 440,
 									"channelcount" : 1,
-									"clipheight" : 51.0,
+									"clipheight" : 25.0,
 									"data" : 									{
 										"clips" : [ 											{
-												"absolutepath" : "E:/GitHub/particle-system-sonification/samples/Cymbal.wav",
+												"absolutepath" : "Cymbal.wav",
 												"filename" : "Cymbal.wav",
 												"filekind" : "audiofile",
 												"id" : "u030003841",
+												"selection" : [ 0.0, 1.0 ],
+												"loop" : 0,
+												"content_state" : 												{
+
+												}
+
+											}
+, 											{
+												"absolutepath" : "Cymbal.wav",
+												"filename" : "Cymbal.wav",
+												"filekind" : "audiofile",
+												"id" : "u070013247",
 												"selection" : [ 0.0, 1.0 ],
 												"loop" : 0,
 												"content_state" : 												{
@@ -872,13 +1029,25 @@
 								"box" : 								{
 									"basictuning" : 440,
 									"channelcount" : 1,
-									"clipheight" : 51.0,
+									"clipheight" : 25.0,
 									"data" : 									{
 										"clips" : [ 											{
-												"absolutepath" : "E:/GitHub/particle-system-sonification/samples/Snare (5).wav",
+												"absolutepath" : "Snare (5).wav",
 												"filename" : "Snare (5).wav",
 												"filekind" : "audiofile",
 												"id" : "u715003838",
+												"selection" : [ 0.0, 1.0 ],
+												"loop" : 0,
+												"content_state" : 												{
+
+												}
+
+											}
+, 											{
+												"absolutepath" : "Snare (5).wav",
+												"filename" : "Snare (5).wav",
+												"filekind" : "audiofile",
+												"id" : "u516013244",
 												"selection" : [ 0.0, 1.0 ],
 												"loop" : 0,
 												"content_state" : 												{
@@ -954,13 +1123,25 @@
 								"box" : 								{
 									"basictuning" : 440,
 									"channelcount" : 1,
-									"clipheight" : 51.0,
+									"clipheight" : 25.0,
 									"data" : 									{
 										"clips" : [ 											{
-												"absolutepath" : "E:/GitHub/particle-system-sonification/samples/Kick (13).wav",
+												"absolutepath" : "Kick (13).wav",
 												"filename" : "Kick (13).wav",
 												"filekind" : "audiofile",
 												"id" : "u954003835",
+												"selection" : [ 0.0, 1.0 ],
+												"loop" : 0,
+												"content_state" : 												{
+
+												}
+
+											}
+, 											{
+												"absolutepath" : "Hit (1).wav",
+												"filename" : "Hit (1).wav",
+												"filekind" : "audiofile",
+												"id" : "u144013241",
 												"selection" : [ 0.0, 1.0 ],
 												"loop" : 0,
 												"content_state" : 												{
@@ -1048,13 +1229,25 @@
 								"box" : 								{
 									"basictuning" : 440,
 									"channelcount" : 1,
-									"clipheight" : 51.0,
+									"clipheight" : 25.0,
 									"data" : 									{
 										"clips" : [ 											{
-												"absolutepath" : "E:/GitHub/particle-system-sonification/samples/Hit (1).wav",
+												"absolutepath" : "Hit (1).wav",
 												"filename" : "Hit (1).wav",
 												"filekind" : "audiofile",
 												"id" : "u514003403",
+												"selection" : [ 0.0, 1.0 ],
+												"loop" : 0,
+												"content_state" : 												{
+
+												}
+
+											}
+, 											{
+												"absolutepath" : "Kick (13).wav",
+												"filename" : "Kick (13).wav",
+												"filekind" : "audiofile",
+												"id" : "u085013238",
 												"selection" : [ 0.0, 1.0 ],
 												"loop" : 0,
 												"content_state" : 												{
@@ -1109,6 +1302,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-30", 0 ],
 									"source" : [ "obj-11", 2 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-9", 0 ],
+									"source" : [ "obj-12", 0 ]
 								}
 
 							}
@@ -1172,8 +1372,36 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-21", 0 ],
+									"source" : [ "obj-19", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-13", 0 ],
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-16", 1 ],
 									"source" : [ "obj-20", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-26", 0 ],
+									"source" : [ "obj-21", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-26", 0 ],
+									"source" : [ "obj-22", 0 ]
 								}
 
 							}
@@ -1325,6 +1553,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-29", 0 ],
+									"source" : [ "obj-37", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-35", 0 ],
 									"source" : [ "obj-38", 0 ]
 								}
@@ -1334,6 +1569,41 @@
 								"patchline" : 								{
 									"destination" : [ "obj-6", 0 ],
 									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-42", 0 ],
+									"source" : [ "obj-41", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-29", 0 ],
+									"source" : [ "obj-42", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-32", 0 ],
+									"source" : [ "obj-43", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-45", 0 ],
+									"source" : [ "obj-44", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-32", 0 ],
+									"source" : [ "obj-45", 0 ]
 								}
 
 							}
@@ -1362,6 +1632,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-10", 0 ],
 									"source" : [ "obj-8", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-13", 0 ],
+									"source" : [ "obj-9", 0 ]
 								}
 
 							}
@@ -5715,7 +5992,8 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "additive.maxpat",
-				"bootpath" : "~/Desktop/School/MUS 313/Assignment8",
+				"bootpath" : "E:/GitHub/particle-system-sonification",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -5728,29 +6006,29 @@
 			}
 , 			{
 				"name" : "Hit (1).wav",
-				"bootpath" : "E:/GitHub/particle-system-sonification/samples",
-				"patcherrelativepath" : "./samples",
+				"bootpath" : "E:/GitHub/particle-system-sonification",
+				"patcherrelativepath" : ".",
 				"type" : "WAVE",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Kick (13).wav",
-				"bootpath" : "E:/GitHub/particle-system-sonification/samples",
-				"patcherrelativepath" : "./samples",
+				"bootpath" : "E:/GitHub/particle-system-sonification",
+				"patcherrelativepath" : ".",
 				"type" : "WAVE",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Snare (5).wav",
-				"bootpath" : "E:/GitHub/particle-system-sonification/samples",
-				"patcherrelativepath" : "./samples",
+				"bootpath" : "E:/GitHub/particle-system-sonification",
+				"patcherrelativepath" : ".",
 				"type" : "WAVE",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Cymbal.wav",
-				"bootpath" : "E:/GitHub/particle-system-sonification/samples",
-				"patcherrelativepath" : "./samples",
+				"bootpath" : "E:/GitHub/particle-system-sonification",
+				"patcherrelativepath" : ".",
 				"type" : "WAVE",
 				"implicit" : 1
 			}
